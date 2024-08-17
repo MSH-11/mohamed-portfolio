@@ -4,6 +4,7 @@ import { FiDownload } from "react-icons/fi";
 // components
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
+import Stats from "@/components/Stats";
 
 const Home = () => {
   return (
@@ -25,14 +26,14 @@ const Home = () => {
             </p>
             {/** buttons and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
+            <a
+                href="/Mohamed_Hamouda_Resume.pdf"
+                download="Mohamed_Hamouda_Resume.pdf"
+                className="uppercase flex items-center gap-2 justify-center whitespace-nowrap rounded-full text-base font-semibold ring-offset-white transition-colors border border-accent bg-transparent text-accent hover:bg-accent hover:text-primary h-[56px] px-8 tracking-[2px]"
               >
                 <span>Download Resume</span>
                 <FiDownload className="text-xl" />
-              </Button>
+              </a>
               <div className="mb-8 xl:mb-0 ">
                 <Social
                   containerStyles="flex gap-6"
@@ -47,6 +48,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Stats />
     </section>
   );
 };
