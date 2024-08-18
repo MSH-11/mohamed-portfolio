@@ -89,7 +89,7 @@ const education = {
     },
     {
       institution: "STEM October High School For Boys",
-      degree: "High School Diploma",
+      degree: "STEM High School Diploma",
       duration: "2017 - 2020",
     },
   ],
