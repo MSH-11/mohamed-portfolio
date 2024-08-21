@@ -9,21 +9,43 @@ import {
   FaReact,
   FaFigma,
   FaNodeJs,
+  FaPython,
+  FaJava,
+  FaPhp,
+  FaRProject,
+  FaGit,
+  FaDocker,
+  FaAws,
+  FaLinux,
 } from "react-icons/fa";
-
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import {
+  SiTypescript,
+  SiCplusplus,
+  SiMysql,
+  SiPostgresql,
+  SiNextdotjs,
+  SiFlask,
+  SiExpo,
+  SiPandas,
+  SiNumpy,
+  SiTensorflow,
+  SiPytorch,
+  SiSupabase,
+  SiGooglecloud,
+  SiVim,
+} from "react-icons/si";
 
 // about datamap
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "I’m Mohamed Hamouda, a software developer with over 3 years of experience in creating impactful and innovative solutions. With a strong foundation in Computer Science and Physics, I specialize in web and mobile app development, machine learning, and AI. I’m currently based in California, USA, and am available for freelance opportunities.",
   info: [
     { fieldName: "Name", fieldValue: "Mohamed Hamouda" },
     { fieldName: "Phone", fieldValue: "(+1)-909-293-6474" },
     { fieldName: "Experience", fieldValue: "3+ Years" },
     { fieldName: "Github", fieldValue: "MSH-11" },
-    { fieldName: "Location", fieldValue: "California, USA" },
+    { fieldName: "Location", fieldValue: "Los Angeles, CA" },
     { fieldName: "Email", fieldValue: "mohamedhamouda200212@gmail.com" },
     { fieldName: "Freelance", fieldValue: "Available" },
     { fieldName: "Languages", fieldValue: "English, Arabic" },
@@ -35,7 +57,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "I’ve applied my expertise in computer science and physics to develop impactful mobile apps, AI-driven web solutions, and machine learning models across various projects.",
   items: [
     {
       company: "ConcentricLife",
@@ -75,7 +97,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My Education",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "Dual degrees in Computer Science and Physics, with advanced coursework in Big Data, Machine Learning, Algorithms, Computational Physics, and Innovation Management. Recognized as an Interdisciplinary Science Scholar and RLCIE Fellow.",
   items: [
     {
       institution: "Harvey Mudd College",
@@ -98,10 +120,43 @@ const education = {
 // skills datamap
 const skills = {
   icon: "/assets/resume/cap.svg",
-  title: "My Education",
+  title: "My Skills",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "Proficient in multiple programming languages and frameworks, including Python, Java, React, and SQL. Experienced with cloud platforms, machine learning libraries, and full-stack development tools.",
   skillList: [
+    // Languages
+    {
+      icon: <FaJava />,
+      name: "Java",
+    },
+    {
+      icon: <FaPython />,
+      name: "Python",
+    },
+    {
+      icon: <SiCplusplus />,
+      name: "C/C++",
+    },
+    {
+      icon: <SiMysql />,
+      name: "MySQL",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "PostgreSQL",
+    },
+    {
+      icon: <FaJs />,
+      name: "JavaScript",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "TypeScript",
+    },
+    {
+      icon: <FaPhp />,
+      name: "PHP",
+    },
     {
       icon: <FaHtml5 />,
       name: "HTML 5",
@@ -111,24 +166,75 @@ const skills = {
       name: "CSS 3",
     },
     {
-      icon: <FaJs />,
-      name: "javascript",
+      icon: <FaRProject />,
+      name: "R",
     },
+    // Frameworks
     {
       icon: <FaReact />,
-      name: "react.js / react native",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "next.js",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css",
+      name: "React/React Native",
     },
     {
       icon: <FaNodeJs />,
-      name: "node.js",
+      name: "Node.js",
+    },
+    {
+      icon: <SiNextdotjs />,
+      name: "NEXT.js",
+    },
+    {
+      icon: <SiFlask />,
+      name: "Flask",
+    },
+    {
+      icon: <SiExpo />,
+      name: "Expo",
+    },
+    // Libraries
+    {
+      icon: <SiPandas />,
+      name: "pandas",
+    },
+    {
+      icon: <SiNumpy />,
+      name: "NumPy",
+    },
+    {
+      icon: <SiTensorflow />,
+      name: "TensorFlow",
+    },
+    {
+      icon: <SiPytorch />,
+      name: "PyTorch",
+    },
+    // Developer Tools
+    {
+      icon: <FaGit />,
+      name: "Git/GitHub",
+    },
+    {
+      icon: <FaDocker />,
+      name: "Docker",
+    },
+    {
+      icon: <SiGooglecloud />,
+      name: "Google Cloud Platform",
+    },
+    {
+      icon: <FaAws />,
+      name: "AWS",
+    },
+    {
+      icon: <SiSupabase />,
+      name: "Supabase",
+    },
+    {
+      icon: <FaLinux />,
+      name: "Linux",
+    },
+    {
+      icon: <SiVim />,
+      name: "Vim",
     },
     {
       icon: <FaFigma />,
@@ -248,34 +354,48 @@ const Resume = () => {
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                   {skills.skillList.map((skill, index) => {
-                    return <li key={index}>
-                      <TooltipProvider>
-                        <Tooltip>
-                          <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group ">
-                            <div className="text-6xl group-hover:text-accent transition-all duration-300 ">{skill.icon}</div>
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p className="capitalize">{skill.name}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    </li>;
+                    return (
+                      <li key={index}>
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group ">
+                              <div className="text-6xl group-hover:text-accent transition-all duration-300 ">
+                                {skill.icon}
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="capitalize">{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    );
                   })}
                 </ul>
               </div>
             </TabsContent>
 
             {/** about me */}
-            <TabsContent value="about" className="w-full text-center xl:text-left">
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
               <div className="flex flex-col gap-[30px] ">
                 <h3 className="text-4xl font-bold ">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {about.description}
+                </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0 ">
-                  {about.info.map((item, index)=>{
-                    return <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
-                      <span className="text-white/60">{item.fieldName}</span>
-                      <span className="text-xl ">{item.fieldValue}</span>
-                    </li>
+                  {about.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex flex-col xl:flex-row items-center justify-center xl:justify-start gap-4"
+                      >
+                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-xl ">{item.fieldValue}</span>
+                      </li>
+                    );
                   })}
                 </ul>
               </div>

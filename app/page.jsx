@@ -13,18 +13,17 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/** text */}
           <div className="text-center xl:text-left order-2 xl:order-none ">
-            <span className="text-xl ">Software Developer</span>
+            <span className="text-xl ">Software Developer | AI Enthusiast</span>
             <h1 className="h1 mb-6">
               Hello I'm <br />{" "}
               <span className="text-accent">Mohamed Hamouda</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I combine technical skills and theoretical understanding to solve
-              complex problems.
+            Harnessing advanced technical skills and a strong theoretical foundation to drive innovative solutions in software engineering and AI.
             </p>
             {/** buttons and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-            <a
+              <a
                 href="/Mohamed_Hamouda_Resume.pdf"
                 download="Mohamed_Hamouda_Resume.pdf"
                 className="uppercase flex items-center gap-2 justify-center whitespace-nowrap rounded-full text-base font-semibold ring-offset-white transition-colors border border-accent bg-transparent text-accent hover:bg-accent hover:text-primary h-[56px] px-8 tracking-[2px]"

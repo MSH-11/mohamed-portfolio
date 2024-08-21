@@ -21,36 +21,50 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "project 1",
+    category: "webApp",
+    title: "P-reset",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    stack: [{ name: "HTML5" }, { name: "Css3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
+      "An AI-powered personalized self-care web application that provides smart scheduling, habit and mood tracking, and NLP-driven journaling features.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Flask" },
+      { name: "PostgreSQL" },
+    ],
+    image: "/assets/work/p-reset.png",
     live: "",
-    github: "",
+    github: "https://github.com/v-song/p-reset",
   },
   {
     num: "02",
-    category: "fullstack",
-    title: "project 2",
+    category: "mobileApp",
+    title: "MoodMate",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
+      "MoodMate is a daily journaling mobile app promoting self-reflection and mental well-being through mood tracking and AI-driven personalized feedback and recommendations.",
+    stack: [
+      { name: "Expo" },
+      { name: "Supabase" },
+      { name: "OpenAI API" },
+      { name: "React Native" },
+    ],
+    image: "/assets/work/MoodMate.png",
     live: "",
-    github: "",
+    github: "https://github.com/MSH-11/MoodMate",
   },
   {
     num: "03",
-    category: "mobile",
-    title: "project 3",
+    category: "mobileApp",
+    title: "Greptile Mobile",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    stack: [{ name: "React Native" }, { name: "Expo" }, { name: "Supabase" }],
-    image: "/assets/work/thumb3.png",
+      "Greptile Mobile lets you search and interact with your repositories on the go. Sign in with GitHub, select repos, and use AI to explore your codebase from your phone.",
+    stack: [
+      { name: "Expo" },
+      { name: "GitHub API" },
+      { name: "Greptile API" },
+      { name: "React Native" },
+    ],
+    image: "/assets/work/greptile-mobile.png",
     live: "",
-    github: "",
+    github: "https://github.com/MSH-11/Greptile-Mobile",
   },
 ];
 
@@ -73,7 +87,7 @@ const Work = () => {
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px] ">
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+          <div className="w-full xl:w-[40%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/** outline num */}
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
@@ -81,19 +95,22 @@ const Work = () => {
               </div>
               {/** project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.title}
               </h2>
               {/** project description */}
               <p className="text-white/60">{project.description}</p>
               {/** stack */}
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 text-center justify-center items-center">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-xl text-accent">
-                      {item.name}
-                      {/** remove the last comma */}
-                      {index !== project.stack.length - 1 && ","}
-                    </li>
+                    <>
+                      <li key={index} className="text-xl text-accent">
+                        {item.name}
+                      </li>
+                      <li key={index} className="text-xl text-accent">
+                        {index !== project.stack.length - 1 && "|"}
+                      </li>
+                    </>
                   );
                 })}
               </ul>
@@ -102,7 +119,7 @@ const Work = () => {
               {/** buttons */}
               <div className="flex items-center gap-4">
                 {/** live project button */}
-                <Link href={project.live}>
+                {/**<Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -113,7 +130,7 @@ const Work = () => {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                </Link>*/}
 
                 {/** github project button */}
                 <Link href={project.github}>
@@ -131,25 +148,31 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[50%]">
+          <div className="w-full xl:w-[60%]">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
-              className="xl:h-[520px] mb-12"
+              className="mb-12"
               onSlideChange={handleSlideChange}
             >
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    <div
+                      className="relative group flex justify-center items-center"
+                      style={{ paddingTop: "calc(56.25% + 50px)" }} // Adjust container height to include buttons
+                    >
                       {/** overlay */}
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                      <div className="absolute top-0 bottom-[44px] w-full h-auto bg-black/15 z-10"></div>
                       {/** image */}
-                      <div className="relative w-full h-full">
+                      <div
+                        className="absolute top-0 left-0 w-full"
+                        style={{ height: "calc(100% - 50px)" }} // Maintain image height and leave space for buttons
+                      >
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover "
+                          className="object-cover"
                           alt=""
                         />
                       </div>
@@ -160,7 +183,7 @@ const Work = () => {
 
               {/** slider buttons */}
               <WorkSliderBtns
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                containerStyles="flex gap-2 absolute right-0  bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
                 btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
               />
             </Swiper>

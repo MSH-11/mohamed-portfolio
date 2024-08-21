@@ -4,6 +4,8 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
+import { Button } from "./ui/button";
+import { IoCalendarOutline } from "react-icons/io5";
 
 const links = [
   {
@@ -37,7 +39,7 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         {/** Logo */}
-        <div className="mt-32 mb-40 text-center text-2xl">
+        <div className="mt-32 text-center text-2xl">
           <Link href="/">
             <h1 className="text-4xl font-semibold">
               Mohamed<span className="text-accent">.</span>
@@ -46,7 +48,7 @@ const MobileNav = () => {
         </div>
 
         {/** nav */}
-        <nav className="flex flex-col justify-center items-center gap-8">
+        <nav className="mt-20 flex flex-col justify-center items-center gap-8">
           {links.map((link, index) => {
             return (
               <Link
@@ -61,6 +63,15 @@ const MobileNav = () => {
               </Link>
             );
           })}
+          <a href="https://calendly.com/hamouda24/15min" className="mt-5">
+            <Button
+              variant="outline"
+              className="uppercase flex items-center gap-3"
+            >
+              <span>Schedule meeting</span>
+              <IoCalendarOutline className="text-xl" />
+            </Button>
+          </a>
         </nav>
       </SheetContent>
     </Sheet>

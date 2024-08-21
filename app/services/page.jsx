@@ -6,31 +6,31 @@ import Link from "next/link";
 const services = [
   {
     num: "01",
-    title: "web development",
+    title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    href: "",
+      "Crafting responsive and scalable websites with modern frameworks to deliver seamless user experiences.",
+    href: "/contact",
   },
   {
     num: "02",
-    title: "app development",
+    title: "App Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    href: "",
+      "Building intuitive and high-performance mobile applications tailored to meet user needs.",
+    href: "/contact",
   },
   {
     num: "03",
-    title: "ML models development",
+    title: "ML Models Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    href: "",
+      "Developing machine learning models to drive data-driven decisions and innovative solutions.",
+    href: "/contact",
   },
   {
     num: "04",
     title: "UI/UX design",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-    href: "",
+      "Designing user-centric interfaces that prioritize functionality and aesthetics for optimal user experiences.",
+    href: "/contact",
   },
 ];
 
